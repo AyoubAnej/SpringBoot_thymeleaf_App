@@ -11,9 +11,12 @@
 </head>
 <body>
     <div layout:fragment="content1">
-        <div class="col-md-6 offset-3">
+        <div class="col-md-6 offset-3 mt-2">
+        <div class="card">
+            <div class="card-header text-center"><h1>Ajouter un patient</h1></div>
+            <div class="card-body">
         <form method="post" th:action="@{save}">
-            <div>
+            <div class="form">
                 <label>Nom</label>
                 <input class="form-control" type="text" name="nom" th:value="${patient.nom}">
                 <span class="text-danger" th:errors="${patient.nom}"></span>
@@ -33,8 +36,10 @@
                 <input class="form-control" type="text" name="score" th:value="${patient.score}">
                 <span class="text-danger" th:errors="${patient.score}"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary mt-1">Save</button>
         </form>
+            </div>
+        </div>
         </div>
     </div>
 </body>
